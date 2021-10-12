@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "UFO in USA",
+  "data": {
+    "url": "https://raw.githubusercontent.com/JiazhouLiu/FIT3179/main/UFOcleaned.csv"
+  },
+  "transform": [
+    {"calculate": "timeParse(datum['Date2'], '%m/%d/%Y')", "as": "date1"},
+    {"calculate": "timeParse(datum['Time'], '%H:%M')", "as": "time1"},
+    {"filter": "datum.date1 != null"}
+  ],
+  "mark": {"type": "rect"},
+  "width": "container",
+  "encoding": {
+    "x": {
+      "field": "date1",
+      "timeUnit": "month",
+      "type": "ordinal",
+      "title": "Month"
+    },
+    "y": {
+      "field": "time1",
+      "timeUnit": "hours",
+      "type": "ordinal",
+      "title": "Time"
+    },
+    "color": {"aggregate": "count", "type": "quantitative"},
+    "tooltip": [
+      {
+        "field": "date1",
+        "timeUnit": "month",
+        "type": "ordinal",
+        "title": "Month"
+      },
+      {
+        "field": "time1",
+        "timeUnit": "hours",
+        "type": "ordinal",
+        "title": "Time"
+      },
+      {"field": "__count", "title": "Count"}
+    ]
+  },
+  "config": {"view": {"stroke": "transparent"}}
+}
