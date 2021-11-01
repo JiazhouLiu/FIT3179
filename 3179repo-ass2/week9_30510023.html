@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <title>Xingli_Wang Week 9 Homework Vega-Lite Proportional Symbol Map</title>
+</head>
+<body>
+<div id="map"></div>
+
+<script type="text/javascript">
+
+    var spec2 = "js/psmap.json";
+    vegaEmbed('#map', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+</script>
+
+</body>
+</html>

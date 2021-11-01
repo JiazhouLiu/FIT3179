@@ -1,0 +1,23 @@
+{
+    "config": {
+        "view": {
+            "stroke": "transparent"
+        }},
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "#eef5f7",
+    "title": {"text": "Number of days of 6 air quality Indexes over 40 years", 
+        "fontSize": 18},
+    "data": {"url":"https://raw.githubusercontent.com/CD30510023/3179repo/ass2/indexdays_pie.csv"
+    },
+    "height": 250,
+    "width": 300,
+    "mark": {"type": "arc", "innerRadius": 55},
+    "encoding": {
+        "theta": {"field": "days", "type": "quantitative"},
+        "color": {"field": "index", "type": "nominal", "title":"Air quality indexes"},
+        "order":{"field": "days", "type": "quantitative", "sort": "ascending"},
+        "tooltip":[
+            {"field": "days", "type": "quantitative", "title":"Number of days"}
+        ]
+    }
+}

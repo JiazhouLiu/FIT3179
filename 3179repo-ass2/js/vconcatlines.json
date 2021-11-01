@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "The overall trend and detailed line charts in each states",
+  "background": "#eef5f7",
+  "data": {"url": "https://raw.githubusercontent.com/CD30510023/3179repo/ass2/days_linechart.csv"},
+  "vconcat":[
+    {
+      "width":500,
+      "height": 100,
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "Year", 
+        "type": "temporal", 
+        "axis":{"tickCount": 6}, 
+        "title":""},
+        "y": {"aggregate": "mean", "field": "avg_AQI", "type": "quantitative", "title":"Average AQI"}
+      }
+    },
+    {
+      "width": 500,
+      "height": 300,
+      "selection": { "state_highlight": { "type": "multi", "fields": ["State"], "bind": "legend" }},
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "Year", "type": "temporal","axis": {"tickCount": 6}},
+        "y": {"field": "avg_AQI", "type": "quantitative", "title":"Average AQI"},
+        "color": {"field": "State", "type": "nominal"},
+        "opacity": { "condition": {"param": "state_highlight", "value": 0.8}, "value": 0.1 },
+        "tooltip":[
+          {"field":"State", "type":"nominal"},
+          {"field":"Year", "type": "temporal", "title":"Date"},
+          {"field":"avg_AQI", "type":"quantitative", "title":"AQI", "format":".2f"}
+        ]
+      }
+    }
+  ]
+}

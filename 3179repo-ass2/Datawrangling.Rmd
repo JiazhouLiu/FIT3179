@@ -1,0 +1,83 @@
+---
+title: "Untitled"
+author: "Xingli Wang_30510023"
+date: "2021/9/24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+a <- read.csv("data/aqi_yearly_1980_to_2021.csv")
+head(a)
+```
+```{r message=FALSE}
+library(tidyverse)
+library(broom)
+summary(a)
+
+```
+
+```{r}
+a %>% group_by(State) %>%count()
+```
+
+
+```{r}
+b <- pivot_longer(a, c(Good.Days,Moderate.Days,
+                  Unhealthy.Days, Unhealthy.for.Sensitive.Groups.Days,
+                  Very.Unhealthy.Days,Hazardous.Days), 
+                  names_to = "Classified.Days", values_to = "Sum.of.Days")
+```
+
+```{r}
+write.csv(b, file = "longer format aqi.csv")
+```
+
+## Export a smaller csv for Vega-Lite Map
+```{r}
+c <- a[, c('State', 'County', 'Median.AQI')]
+write.csv(c, file = "vega_medianaqi.csv")
+```
+
+## Export a smaller csv for Vega-Lite multi-line chart
+```{r}
+d <- a[, c('Year', 'State', 'Median.AQI', 'Days.with.AQI')]
+d <- d %>% group_by(Year, State) %>% summarise(avg_AQI = sum(Median.AQI)/n())
+
+
+write.csv(d, file = "days_linechart.csv")
+```
+
+```{r}
+dd <- read.csv("data/days_linechart.csv")
+head(dd)
+
+write.csv(d_2, file = "data/categorial_piechart.csv")
+```
+
+```{r pie data}
+d_3 <- a[, c('State', 'Year', 'Good.Days', 'Moderate.Days', 'Hazardous.Days', 'Unhealthy.Days', 'Very.Unhealthy.Days', 'Unhealthy.for.Sensitive.Groups.Days')] %>% group_by(State) %>% summarise(`Good Days` = sum(Good.Days), `Moderate Days` = sum(Moderate.Days), `Hazardous Days` = sum(Hazardous.Days), `Unhealthy Days` = sum(Unhealthy.Days), `Very Unhealthy Days` = sum(Very.Unhealthy.Days), `Unhealthy for Sensitive Days` = sum(Unhealthy.for.Sensitive.Groups.Days))
+d_3
+
+d_4 <- d_3 %>%pivot_longer(c(`Good Days`, `Moderate Days`, `Hazardous Days`, `Unhealthy Days`, `Very Unhealthy Days`, `Unhealthy for Sensitive Days`), names_to = "levels", values_to = "days")
+
+write.csv(d_4, file = "data/sumofdays_bar.csv")
+```
+
+
+```{r pie chart}
+#all indexes
+a_5 <- a[, c('State', 'Year', 'Days.CO', 'Days.Ozone', 'Days.SO2', 'Days.PM2.5','Days.with.AQI', 'Days.PM10')] %>%
+  group_by(Year) %>% summarise(CO = sum(Days.CO), Ozone = sum(Days.Ozone), SO2 = sum(Days.SO2), pm2.5 = sum(Days.PM2.5), AQI = sum(Days.with.AQI), pm10 = sum(Days.PM10))
+
+a_6 <- a_5 %>% pivot_longer(c(CO, Ozone, SO2, pm2.5, AQI, pm10), names_to = 'index', values_to = 'days') %>% group_by(index) %>% summarise(days = sum(days))
+
+write.csv(a_6, file = "data/indexdays_pie.csv")
+
+a %>% group_by(Year, State)
+
+```
+

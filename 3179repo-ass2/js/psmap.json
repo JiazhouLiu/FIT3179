@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 900,
+  "height": 700,
+  "title": "The Median Air Quality Index, AQI, in United State",
+  "projection": {"type": "equalEarth", "center": [-100, 40], "scale": 600},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/vega/vega-datasets/master/data/us-10m.json",
+        "format": {"type": "topojson", "feature": "counties"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/CD30510023/3179repo/main/aqi_yearly_1980_to_2021.csv"
+      },
+      "mark": {"type": "circle", "tooltip": {"content": "data"}},
+      "encoding": {
+        "longitude": {"field": "Longitude", "type": "quantitative"},
+        "latitude": {"field": "Latitude", "type": "quantitative"},
+        "color": {
+          "field": "Median AQI",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [32, 39, 46],
+            "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+          }
+        }
+      }
+    }
+  ]
+}

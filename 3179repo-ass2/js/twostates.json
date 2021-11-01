@@ -1,0 +1,41 @@
+
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Google's stock price over time.",
+    "data": {"url": "https://raw.githubusercontent.com/CD30510023/3179repo/ass2/days_linechart.csv"},
+    "background": "#eef5f7",
+    "title": {"text":"Trend of average AQI in Country of Mexico and Hawaii", "fontSize": 18},
+    "hconcat":[
+      {
+        "transform": [{"filter": "datum.State==='Country Of Mexico'"}],
+        "mark": {
+          "type": "line",
+          "interpolate": "monotone"
+        },
+        "encoding": {
+          "x": {"field": "Year", 
+          "type": "temporal", 
+          "axis":{"tickCount": 6}},
+          "y": {"aggregate": "mean", "field": "avg_AQI", "type": "quantitative", "title":"Average AQI"}
+        }
+      },
+      {
+        "transform": [{"filter": "datum.State==='Hawaii'"}],
+        "mark": {
+          "type": "line",
+          "interpolate": "monotone"
+        },
+        "encoding": {
+          "x": {"field": "Year", 
+          "type": "temporal", 
+          "axis":{"tickCount": 6}},
+          "y": {"aggregate": "mean", "field": "avg_AQI", "type": "quantitative", "title":""}
+        }
+      }
+  
+    ]
+  
+    
+  }
+  
+  

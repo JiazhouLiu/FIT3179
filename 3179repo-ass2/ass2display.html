@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css" />
+    <title>United States AQI by Xingli Wang</title>
+    <link rel="stylesheet" href="layout.css">
+
+    
+</head>
+
+<body style="background-color: #eef5f7;">
+    <div class='pure-g'> <!--First row-->
+        <div class="pure-u-1" style="background-color: #67a3d4c2; text-align: center;">
+            <h1 id="maintitle">The change of Air Quality in United States from 1980 to 2020</h1>
+    </div>
+            
+    <div class="pure-g"> <!--Second row-->
+        <div class="pure-u-1-2" style="position: relative;"><!--divide the row into 1/2 column-->
+            <div id="pie"></div>
+        </div>
+
+        <div class="pure-u-1-2" style="position: relative; line-height: 1.5;"><!--divide the row into 1/2 column-->
+            <p>The dataset introduces severial indexes to observe American air quality. <br/> Looking at the proportion of each index, 
+                <strong>AQI has the largest proportion </strong> amongs observed days. <br/> Hence, the report mainly focus on AQI index.
+            </p>
+            <p>
+                <br/> United States suffered heavey air polution a long time in 1950s. 
+                <br/> The rapid growth of industrial manufacturing and customer consumption has been accompanied by a marked deterioration in air, water and soil pollution.
+                Southern California has been plagued by smog caused by the sickly growth of fuel quality and highway traffic.
+            </p>
+            <p>
+                <strong>Soon, Smog swept across the United States, the most famous one will be 1948 donora smog and Los Angeles smog.</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="pure-g">
+        
+        <div class="pure-u-1" style="position: relative;"> 
+            <img src="../images/air.jpg"/>
+            <p class="light-text" style="color: rgb(121, 114, 114);">(Hallemann, 2017)</p>  
+        </div> 
+        <div class= "pure-u-1-2" style="padding-left:5%;">
+            <div id="choropleth"></div>
+        </div>
+        <div class= "pure-u-1-2" style="padding-right:5%;">
+            <div id="hbar"></div>
+        </div>
+
+    </div>
+
+    <div>
+        <p>
+            <br/>
+            <br/>
+        </p>
+    </div>
+
+    <div class="pure-g">
+        <div class= "pure-u-2-3" style="padding-left:5%;">
+            <div id="trellisline"></div>
+        </div>
+        <div class= "pure-u-1-3" style="padding-right:5%;">
+            <div id="twostatesline"></div>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        var spec2 = "js/airindexpie.json";
+        vegaEmbed('#pie', spec2).then(function(result) {
+        }).catch(console.error);
+    </script>
+
+    <script type="text/javascript">
+        var spec2 = "js/choromap.json";
+        vegaEmbed('#choropleth', spec2).then(function(result) {
+        }).catch(console.error);
+    </script>
+    
+    <script type="text/javascript">
+        var spec2 = "js/hstackedbar.json";
+        vegaEmbed('#hbar', spec2).then(function(result) {
+        }).catch(console.error);
+    </script>
+
+    <script type="text/javascript">
+        var spec2 = "js/vconcatlines.json";
+        vegaEmbed('#trellisline', spec2).then(function(result) {
+        }).catch(console.error);
+    </script>
+
+    <script type="text/javascript">
+        var spec2 = "js/twostates.json";
+        vegaEmbed('#twostatesline', spec2).then(function(result) {
+        }).catch(console.error);
+    </script>
+</body>
+</html>

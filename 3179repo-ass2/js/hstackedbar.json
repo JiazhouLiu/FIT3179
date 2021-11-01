@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "background": "#eef5f7",
+    "data":{"url":"https://raw.githubusercontent.com/CD30510023/3179repo/ass2/sumofdays_bar.csv"},
+    "width": 500,
+    "height": 500,
+    "padding": 10,
+    "params": [
+        {
+          "name":"Number_days",
+          "value":720000,
+          "bind":{
+            "input":"range",
+            "min":100,
+            "max":430000,
+            "step":100,
+            "name":"Number of days:"
+          }
+        }
+      ],
+      "transform": [
+        {"filter":"datum.days < Number_days"}
+      ],
+    "mark": "bar",
+    "encoding": {
+        "x": {"aggregate": "sum", "field": "days"},
+        "y": {"field": "State", "title":"",
+        "sort": {"field": "days", "op": "average", "order":"descending"}},
+        "color": {"field": "levels",
+            "title":"Levels of Air quality",
+            "scale":{
+                "range":[
+                    "#456C97","#66ccee","#11aa00","#f3c77c","#f7347a","#aadd88"
+                ]
+            }
+      
+        }
+        
+    }
+  
+}
+

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {"text": "The average AQI value, across 40 years", "fontSize":18},
+  "width": 600,
+  "height": 500,
+  "background": "#eef5f7",
+  "data": {
+    "url": "https://raw.githubusercontent.com/CD30510023/3179repo/ass2/days_linechart.csv"
+  },
+  "transform": [
+    {
+      "lookup": "State",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/CD30510023/3179repo/ass2/USSTATE.json",
+          "format": {"type": "topojson", "feature": "gz_2010_us_040_00_500k"}
+        },
+        "key": "properties.NAME"
+      },
+      "as": "state"
+    }
+  ],
+  "projection": {"type": "albersUsa"},
+  "mark": {"type": "geoshape", "stroke": "white"},
+  "encoding": {
+    "shape": {
+        "field": "state",
+        "type": "geojson"
+      },
+    "color": {
+      "field": "avg_AQI",
+      "title": "Average AQI",
+      "type": "quantitative",
+      "scale": {
+        "type": "threshold",
+        "domain": [32, 39, 46],
+        "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+      }
+    },
+    "tooltip": [
+      {"field": "State", "type": "nominal", "title": "State"},
+      {"field": "avg_AQI", "type": "quantitative", "title": "Average AQI", "format": ".2f"}
+    ]
+  }
+}

@@ -1,0 +1,325 @@
+"","State","levels","days"
+"1","Alabama","Good Days",94591
+"2","Alabama","Moderate Days",38330
+"3","Alabama","Hazardous Days",0
+"4","Alabama","Unhealthy Days",1294
+"5","Alabama","Very Unhealthy Days",128
+"6","Alabama","Unhealthy for Sensitive Days",6651
+"7","Alaska","Good Days",49902
+"8","Alaska","Moderate Days",8600
+"9","Alaska","Hazardous Days",19
+"10","Alaska","Unhealthy Days",435
+"11","Alaska","Very Unhealthy Days",61
+"12","Alaska","Unhealthy for Sensitive Days",1011
+"13","Arizona","Good Days",78978
+"14","Arizona","Moderate Days",43481
+"15","Arizona","Hazardous Days",147
+"16","Arizona","Unhealthy Days",4535
+"17","Arizona","Very Unhealthy Days",282
+"18","Arizona","Unhealthy for Sensitive Days",11363
+"19","Arkansas","Good Days",66166
+"20","Arkansas","Moderate Days",17826
+"21","Arkansas","Hazardous Days",0
+"22","Arkansas","Unhealthy Days",259
+"23","Arkansas","Very Unhealthy Days",11
+"24","Arkansas","Unhealthy for Sensitive Days",1822
+"25","California","Good Days",422856
+"26","California","Moderate Days",193438
+"27","California","Hazardous Days",548
+"28","California","Unhealthy Days",23936
+"29","California","Very Unhealthy Days",10058
+"30","California","Unhealthy for Sensitive Days",58436
+"31","Colorado","Good Days",201423
+"32","Colorado","Moderate Days",64781
+"33","Colorado","Hazardous Days",9
+"34","Colorado","Unhealthy Days",612
+"35","Colorado","Very Unhealthy Days",120
+"36","Colorado","Unhealthy for Sensitive Days",6730
+"37","Connecticut","Good Days",63304
+"38","Connecticut","Moderate Days",22734
+"39","Connecticut","Hazardous Days",0
+"40","Connecticut","Unhealthy Days",2002
+"41","Connecticut","Very Unhealthy Days",966
+"42","Connecticut","Unhealthy for Sensitive Days",5085
+"43","Country Of Mexico","Good Days",3223
+"44","Country Of Mexico","Moderate Days",4271
+"45","Country Of Mexico","Hazardous Days",63
+"46","Country Of Mexico","Unhealthy Days",614
+"47","Country Of Mexico","Very Unhealthy Days",269
+"48","Country Of Mexico","Unhealthy for Sensitive Days",1744
+"49","Delaware","Good Days",22417
+"50","Delaware","Moderate Days",12818
+"51","Delaware","Hazardous Days",0
+"52","Delaware","Unhealthy Days",900
+"53","Delaware","Very Unhealthy Days",204
+"54","Delaware","Unhealthy for Sensitive Days",3738
+"55","District Of Columbia","Good Days",6348
+"56","District Of Columbia","Moderate Days",7122
+"57","District Of Columbia","Hazardous Days",0
+"58","District Of Columbia","Unhealthy Days",336
+"59","District Of Columbia","Very Unhealthy Days",67
+"60","District Of Columbia","Unhealthy for Sensitive Days",1054
+"61","Florida","Good Days",321278
+"62","Florida","Moderate Days",74905
+"63","Florida","Hazardous Days",1
+"64","Florida","Unhealthy Days",1776
+"65","Florida","Very Unhealthy Days",45
+"66","Florida","Unhealthy for Sensitive Days",12516
+"67","Georgia","Good Days",151778
+"68","Georgia","Moderate Days",64761
+"69","Georgia","Hazardous Days",1
+"70","Georgia","Unhealthy Days",1983
+"71","Georgia","Very Unhealthy Days",398
+"72","Georgia","Unhealthy for Sensitive Days",8112
+"73","Hawaii","Good Days",34900
+"74","Hawaii","Moderate Days",2052
+"75","Hawaii","Hazardous Days",10
+"76","Hawaii","Unhealthy Days",3392
+"77","Hawaii","Very Unhealthy Days",71
+"78","Hawaii","Unhealthy for Sensitive Days",1922
+"79","Idaho","Good Days",117461
+"80","Idaho","Moderate Days",22729
+"81","Idaho","Hazardous Days",13
+"82","Idaho","Unhealthy Days",1602
+"83","Idaho","Very Unhealthy Days",63
+"84","Idaho","Unhealthy for Sensitive Days",3530
+"85","Illinois","Good Days",239870
+"86","Illinois","Moderate Days",72802
+"87","Illinois","Hazardous Days",0
+"88","Illinois","Unhealthy Days",3657
+"89","Illinois","Very Unhealthy Days",231
+"90","Illinois","Unhealthy for Sensitive Days",19648
+"91","Indiana","Good Days",208823
+"92","Indiana","Moderate Days",97045
+"93","Indiana","Hazardous Days",1
+"94","Indiana","Unhealthy Days",7143
+"95","Indiana","Very Unhealthy Days",313
+"96","Indiana","Unhealthy for Sensitive Days",29571
+"97","Iowa","Good Days",106306
+"98","Iowa","Moderate Days",36600
+"99","Iowa","Hazardous Days",0
+"100","Iowa","Unhealthy Days",1192
+"101","Iowa","Very Unhealthy Days",12
+"102","Iowa","Unhealthy for Sensitive Days",5673
+"103","Kansas","Good Days",64367
+"104","Kansas","Moderate Days",15820
+"105","Kansas","Hazardous Days",0
+"106","Kansas","Unhealthy Days",212
+"107","Kansas","Very Unhealthy Days",8
+"108","Kansas","Unhealthy for Sensitive Days",1932
+"109","Kentucky","Good Days",206535
+"110","Kentucky","Moderate Days",77130
+"111","Kentucky","Hazardous Days",0
+"112","Kentucky","Unhealthy Days",3287
+"113","Kentucky","Very Unhealthy Days",270
+"114","Kentucky","Unhealthy for Sensitive Days",17475
+"115","Louisiana","Good Days",188762
+"116","Louisiana","Moderate Days",55209
+"117","Louisiana","Hazardous Days",0
+"118","Louisiana","Unhealthy Days",1773
+"119","Louisiana","Very Unhealthy Days",181
+"120","Louisiana","Unhealthy for Sensitive Days",9468
+"121","Maine","Good Days",104378
+"122","Maine","Moderate Days",17145
+"123","Maine","Hazardous Days",0
+"124","Maine","Unhealthy Days",1128
+"125","Maine","Very Unhealthy Days",181
+"126","Maine","Unhealthy for Sensitive Days",5317
+"127","Maryland","Good Days",108741
+"128","Maryland","Moderate Days",42788
+"129","Maryland","Hazardous Days",0
+"130","Maryland","Unhealthy Days",3623
+"131","Maryland","Very Unhealthy Days",904
+"132","Maryland","Unhealthy for Sensitive Days",10114
+"133","Massachusetts","Good Days",101181
+"134","Massachusetts","Moderate Days",39292
+"135","Massachusetts","Hazardous Days",0
+"136","Massachusetts","Unhealthy Days",1750
+"137","Massachusetts","Very Unhealthy Days",438
+"138","Massachusetts","Unhealthy for Sensitive Days",8381
+"139","Michigan","Good Days",181605
+"140","Michigan","Moderate Days",51040
+"141","Michigan","Hazardous Days",1
+"142","Michigan","Unhealthy Days",2813
+"143","Michigan","Very Unhealthy Days",311
+"144","Michigan","Unhealthy for Sensitive Days",12693
+"145","Minnesota","Good Days",151106
+"146","Minnesota","Moderate Days",31499
+"147","Minnesota","Hazardous Days",1
+"148","Minnesota","Unhealthy Days",499
+"149","Minnesota","Very Unhealthy Days",10
+"150","Minnesota","Unhealthy for Sensitive Days",3270
+"151","Mississippi","Good Days",77782
+"152","Mississippi","Moderate Days",25079
+"153","Mississippi","Hazardous Days",0
+"154","Mississippi","Unhealthy Days",403
+"155","Mississippi","Very Unhealthy Days",12
+"156","Mississippi","Unhealthy for Sensitive Days",3404
+"157","Missouri","Good Days",128659
+"158","Missouri","Moderate Days",52879
+"159","Missouri","Hazardous Days",1
+"160","Missouri","Unhealthy Days",3366
+"161","Missouri","Very Unhealthy Days",206
+"162","Missouri","Unhealthy for Sensitive Days",12774
+"163","Montana","Good Days",132838
+"164","Montana","Moderate Days",25690
+"165","Montana","Hazardous Days",21
+"166","Montana","Unhealthy Days",1989
+"167","Montana","Very Unhealthy Days",45
+"168","Montana","Unhealthy for Sensitive Days",6160
+"169","Nebraska","Good Days",49524
+"170","Nebraska","Moderate Days",9927
+"171","Nebraska","Hazardous Days",0
+"172","Nebraska","Unhealthy Days",52
+"173","Nebraska","Very Unhealthy Days",27
+"174","Nebraska","Unhealthy for Sensitive Days",495
+"175","Nevada","Good Days",59118
+"176","Nevada","Moderate Days",22660
+"177","Nevada","Hazardous Days",34
+"178","Nevada","Unhealthy Days",390
+"179","Nevada","Very Unhealthy Days",66
+"180","Nevada","Unhealthy for Sensitive Days",3368
+"181","New Hampshire","Good Days",64055
+"182","New Hampshire","Moderate Days",16549
+"183","New Hampshire","Hazardous Days",0
+"184","New Hampshire","Unhealthy Days",801
+"185","New Hampshire","Very Unhealthy Days",59
+"186","New Hampshire","Unhealthy for Sensitive Days",5033
+"187","New Jersey","Good Days",142427
+"188","New Jersey","Moderate Days",55995
+"189","New Jersey","Hazardous Days",0
+"190","New Jersey","Unhealthy Days",4381
+"191","New Jersey","Very Unhealthy Days",1312
+"192","New Jersey","Unhealthy for Sensitive Days",11267
+"193","New Mexico","Good Days",99772
+"194","New Mexico","Moderate Days",32986
+"195","New Mexico","Hazardous Days",73
+"196","New Mexico","Unhealthy Days",1337
+"197","New Mexico","Very Unhealthy Days",102
+"198","New Mexico","Unhealthy for Sensitive Days",5666
+"199","New York","Good Days",246271
+"200","New York","Moderate Days",74615
+"201","New York","Hazardous Days",0
+"202","New York","Unhealthy Days",3879
+"203","New York","Very Unhealthy Days",693
+"204","New York","Unhealthy for Sensitive Days",18419
+"205","North Carolina","Good Days",232040
+"206","North Carolina","Moderate Days",86012
+"207","North Carolina","Hazardous Days",0
+"208","North Carolina","Unhealthy Days",3404
+"209","North Carolina","Very Unhealthy Days",265
+"210","North Carolina","Unhealthy for Sensitive Days",15275
+"211","North Dakota","Good Days",105340
+"212","North Dakota","Moderate Days",9825
+"213","North Dakota","Hazardous Days",0
+"214","North Dakota","Unhealthy Days",256
+"215","North Dakota","Very Unhealthy Days",2
+"216","North Dakota","Unhealthy for Sensitive Days",1528
+"217","Ohio","Good Days",299142
+"218","Ohio","Moderate Days",128466
+"219","Ohio","Hazardous Days",2
+"220","Ohio","Unhealthy Days",7733
+"221","Ohio","Very Unhealthy Days",663
+"222","Ohio","Unhealthy for Sensitive Days",36607
+"223","Oklahoma","Good Days",113550
+"224","Oklahoma","Moderate Days",36313
+"225","Oklahoma","Hazardous Days",0
+"226","Oklahoma","Unhealthy Days",907
+"227","Oklahoma","Very Unhealthy Days",38
+"228","Oklahoma","Unhealthy for Sensitive Days",5705
+"229","Oregon","Good Days",162454
+"230","Oregon","Moderate Days",39371
+"231","Oregon","Hazardous Days",101
+"232","Oregon","Unhealthy Days",778
+"233","Oregon","Very Unhealthy Days",114
+"234","Oregon","Unhealthy for Sensitive Days",2883
+"235","Pennsylvania","Good Days",276189
+"236","Pennsylvania","Moderate Days",129333
+"237","Pennsylvania","Hazardous Days",7
+"238","Pennsylvania","Unhealthy Days",8028
+"239","Pennsylvania","Very Unhealthy Days",1100
+"240","Pennsylvania","Unhealthy for Sensitive Days",30666
+"241","Puerto Rico","Good Days",64437
+"242","Puerto Rico","Moderate Days",8074
+"243","Puerto Rico","Hazardous Days",3
+"244","Puerto Rico","Unhealthy Days",130
+"245","Puerto Rico","Very Unhealthy Days",8
+"246","Puerto Rico","Unhealthy for Sensitive Days",718
+"247","Rhode Island","Good Days",23227
+"248","Rhode Island","Moderate Days",7169
+"249","Rhode Island","Hazardous Days",0
+"250","Rhode Island","Unhealthy Days",408
+"251","Rhode Island","Very Unhealthy Days",126
+"252","Rhode Island","Unhealthy for Sensitive Days",1351
+"253","South Carolina","Good Days",115243
+"254","South Carolina","Moderate Days",38166
+"255","South Carolina","Hazardous Days",0
+"256","South Carolina","Unhealthy Days",943
+"257","South Carolina","Very Unhealthy Days",37
+"258","South Carolina","Unhealthy for Sensitive Days",5734
+"259","South Dakota","Good Days",54914
+"260","South Dakota","Moderate Days",8394
+"261","South Dakota","Hazardous Days",2
+"262","South Dakota","Unhealthy Days",9
+"263","South Dakota","Very Unhealthy Days",1
+"264","South Dakota","Unhealthy for Sensitive Days",155
+"265","Tennessee","Good Days",151378
+"266","Tennessee","Moderate Days",65503
+"267","Tennessee","Hazardous Days",1
+"268","Tennessee","Unhealthy Days",4223
+"269","Tennessee","Very Unhealthy Days",223
+"270","Tennessee","Unhealthy for Sensitive Days",20518
+"271","Texas","Good Days",287848
+"272","Texas","Moderate Days",89943
+"273","Texas","Hazardous Days",17
+"274","Texas","Unhealthy Days",5704
+"275","Texas","Very Unhealthy Days",1189
+"276","Texas","Unhealthy for Sensitive Days",18926
+"277","Utah","Good Days",76649
+"278","Utah","Moderate Days",39341
+"279","Utah","Hazardous Days",2
+"280","Utah","Unhealthy Days",1492
+"281","Utah","Very Unhealthy Days",111
+"282","Utah","Unhealthy for Sensitive Days",6679
+"283","Vermont","Good Days",35244
+"284","Vermont","Moderate Days",5976
+"285","Vermont","Hazardous Days",0
+"286","Vermont","Unhealthy Days",80
+"287","Vermont","Very Unhealthy Days",3
+"288","Vermont","Unhealthy for Sensitive Days",618
+"289","Virgin Islands","Good Days",13198
+"290","Virgin Islands","Moderate Days",2719
+"291","Virgin Islands","Hazardous Days",0
+"292","Virgin Islands","Unhealthy Days",25
+"293","Virgin Islands","Very Unhealthy Days",0
+"294","Virgin Islands","Unhealthy for Sensitive Days",433
+"295","Virginia","Good Days",212293
+"296","Virginia","Moderate Days",59973
+"297","Virginia","Hazardous Days",0
+"298","Virginia","Unhealthy Days",2569
+"299","Virginia","Very Unhealthy Days",319
+"300","Virginia","Unhealthy for Sensitive Days",11396
+"301","Washington","Good Days",225569
+"302","Washington","Moderate Days",49288
+"303","Washington","Hazardous Days",66
+"304","Washington","Unhealthy Days",1530
+"305","Washington","Very Unhealthy Days",157
+"306","Washington","Unhealthy for Sensitive Days",6731
+"307","West Virginia","Good Days",94786
+"308","West Virginia","Moderate Days",40680
+"309","West Virginia","Hazardous Days",0
+"310","West Virginia","Unhealthy Days",3523
+"311","West Virginia","Very Unhealthy Days",87
+"312","West Virginia","Unhealthy for Sensitive Days",16835
+"313","Wisconsin","Good Days",202580
+"314","Wisconsin","Moderate Days",48831
+"315","Wisconsin","Hazardous Days",0
+"316","Wisconsin","Unhealthy Days",3862
+"317","Wisconsin","Very Unhealthy Days",464
+"318","Wisconsin","Unhealthy for Sensitive Days",13104
+"319","Wyoming","Good Days",101417
+"320","Wyoming","Moderate Days",22593
+"321","Wyoming","Hazardous Days",29
+"322","Wyoming","Unhealthy Days",120
+"323","Wyoming","Very Unhealthy Days",16
+"324","Wyoming","Unhealthy for Sensitive Days",745
