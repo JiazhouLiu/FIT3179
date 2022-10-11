@@ -34,5 +34,6 @@
                 "axis": { "tickCount": 3, "grid": false }
             }
         }
-    }]
+    }],
+    "config": {"background": "black"}
 }
