@@ -38,7 +38,7 @@
       "type": "nominal",
       "title": "Australian City",
       "sort": {"field": "Abs_Flights", "order": "descending"},
-      "axis": {"ticks": false, "domain": false, "labelAngle": 0}
+      "axis": {"ticks": false, "labelAngle": 0}
     }
   },
   "layer": [
@@ -50,7 +50,8 @@
           "type": "quantitative",
           "title": "Total Flights",
           "scale": {"domain": [-50000, 50000]},
-          "axis": {"ticks": false, "labels": false}
+          "axis": {"ticks": false, "labels": false},
+          "stack": null
         },
         "color": {
           "field": "Flight_Type",
