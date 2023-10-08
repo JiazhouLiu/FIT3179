@@ -4,7 +4,8 @@
   "width": 800,
   "height": 400,
   "data": {
-    "url": "https://raw.githubusercontent.com/tonyz1260/FIT3179/main/Week10Homework/data/InternationalTotalFlights.csv"
+    "url": "https://raw.githubusercontent.com/tonyz1260/FIT3179/main/Week10Homework/data/InternationalTotalFlights.csv",
+    "format": {"parse": {"Total_Flights" : "number"}}
   },
   "params": [
     {
@@ -81,7 +82,7 @@
         "x": {
           "field": "Australian_City",
           "type": "nominal",
-          "sort": {"field": "Final_Flights", "order": "descending"}
+          "sort": {"field": "Abs_Flights", "order": "descending"}
         },
         "y": {"field": "Final_Flights", "type": "quantitative"},
         "text": {
@@ -112,7 +113,7 @@
         "x": {
           "field": "Australian_City",
           "type": "nominal",
-          "sort": {"field": "Final_Flights", "order": "descending"}
+          "sort": {"field": "Abs_Flights", "order": "descending"}
         },
         "y": {"field": "Final_Flights", "type": "quantitative"},
         "text": {
