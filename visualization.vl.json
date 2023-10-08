@@ -1,41 +1,136 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Australian Inbound and Outbound Flights",
+  "width": 800,
+  "height": 400,
   "data": {
-    "url": "https://jiazhouliu.github.io/FIT3179/seattle-weather.csv"
+    "url": "https://raw.githubusercontent.com/tonyz1260/FIT3179/main/Week10Homework/data/InternationalTotalFlights.csv"
   },
-  "mark": "bar",
-  "encoding": {
-    "x": {
-      "timeUnit": "month",
-      "field": "date",
-      "type": "ordinal",
-      "title": "Month of the year"
-    },
-    "y": {
-      "aggregate": "count",
-      "type": "quantitative"
-    },
-    "color": {
-      "field": "weather",
-      "type": "nominal",
-      "scale": {
-        "domain": [
-          "sun",
-          "fog",
-          "drizzle",
-          "rain",
-          "snow"
-        ],
-        "range": [
-          "#e7ba52",
-          "#c7c7c7",
-          "#aec7e8",
-          "#1f77b4",
-          "#9467bd"
-        ]
-      },
-      "title": "Weather type"
+  "params": [
+    {
+      "name": "Year_Selected",
+      "value": 2018,
+      "bind": {
+        "input": "range",
+        "min": 2003,
+        "max": 2022,
+        "step": 1,
+        "name": "Year"
+      }
     }
-  },
-  "config": {}
+  ],
+  "transform": [
+    {"filter": "datum.Year == Year_Selected"},
+    {
+      "calculate": "datum.Type == 'Inbound' ? 'Inbound' : 'Outbound'",
+      "as": "Flight_Type"
+    },
+    {"calculate": "abs(datum.Total_Flights)", "as": "Abs_Flights"},
+    {
+      "calculate": "datum.Type == 'Inbound' ? datum.Total_Flights : -datum.Total_Flights",
+      "as": "Final_Flights"
+    }
+  ],
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "x": {
+          "field": "Australian_City",
+          "type": "nominal",
+          "title": "Australian City",
+          "sort": {"field": "Abs_Flights", "order": "descending"},
+          "axis": {"ticks": false, "domain": false, "labelAngle": 0}
+        },
+        "y": {
+          "field": "Final_Flights",
+          "type": "quantitative",
+          "title": "Total Flights",
+          "scale": {"domain": [-50000, 50000]},
+          "axis": {"ticks": false, "labels": false}
+        },
+        "color": {
+          "field": "Flight_Type",
+          "type": "nominal",
+          "scale": {"range": ["blue", "red"]}
+        },
+        "tooltip": [
+          {
+            "field": "Australian_City",
+            "type": "nominal",
+            "title": "Australian City"
+          },
+          {"field": "Flight_Type", "type": "nominal", "title": "Flight Type"},
+          {
+            "field": "Total_Flights",
+            "type": "quantitative",
+            "title": "Total Flights"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dy": -10,
+        "fontSize": 12
+      },
+      "encoding": {
+        "x": {
+          "field": "Australian_City",
+          "type": "nominal",
+          "sort": {"field": "Final_Flights", "order": "descending"}
+        },
+        "y": {"field": "Final_Flights", "type": "quantitative"},
+        "text": {
+          "condition": {
+            "test": "datum.Flight_Type == 'Inbound'",
+            "field": "Final_Flights",
+            "type": "quantitative",
+            "format": ".0f"
+          },
+          "value": null
+        },
+        "color": {
+          "field": "Flight_Type",
+          "type": "nominal",
+          "scale": {"range": ["blue", "red"]}
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "dy": 10,
+        "fontSize": 12
+      },
+      "encoding": {
+        "x": {
+          "field": "Australian_City",
+          "type": "nominal",
+          "sort": {"field": "Final_Flights", "order": "descending"}
+        },
+        "y": {"field": "Final_Flights", "type": "quantitative"},
+        "text": {
+          "condition": {
+            "test": "datum.Flight_Type == 'Outbound'",
+            "field": "Total_Flights",
+            "type": "quantitative",
+            "format": ".0f"
+          },
+          "value": null
+        },
+        "color": {
+          "field": "Flight_Type",
+          "type": "nominal",
+          "scale": {"range": ["blue", "red"]}
+        }
+      }
+    }
+  ],
+  "config": {"view": {"stroke": "transparent"}}
 }
