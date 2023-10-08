@@ -5,7 +5,7 @@
   "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/tonyz1260/FIT3179/main/Week10Homework/data/InternationalTotalFlights.csv",
-    "format": {"parse": {"Total_Flights" : "number"}}
+    "format": {"parse": {"Total_Flights": "number"}}
   },
   "params": [
     {
@@ -32,17 +32,19 @@
       "as": "Final_Flights"
     }
   ],
+  "encoding": {
+    "x": {
+      "field": "Australian_City",
+      "type": "nominal",
+      "title": "Australian City",
+      "sort": {"field": "Abs_Flights", "order": "descending"},
+      "axis": {"ticks": false, "domain": false, "labelAngle": 0}
+    }
+  },
   "layer": [
     {
       "mark": "bar",
       "encoding": {
-        "x": {
-          "field": "Australian_City",
-          "type": "nominal",
-          "title": "Australian City",
-          "sort": {"field": "Abs_Flights", "order": "descending"},
-          "axis": {"ticks": false, "domain": false, "labelAngle": 0}
-        },
         "y": {
           "field": "Final_Flights",
           "type": "quantitative",
@@ -79,11 +81,6 @@
         "fontSize": 12
       },
       "encoding": {
-        "x": {
-          "field": "Australian_City",
-          "type": "nominal",
-          "sort": {"field": "Abs_Flights", "order": "descending"}
-        },
         "y": {"field": "Final_Flights", "type": "quantitative"},
         "text": {
           "condition": {
@@ -92,7 +89,7 @@
             "type": "quantitative",
             "format": ".0f"
           },
-          "value": null
+          "value": ""
         },
         "color": {
           "field": "Flight_Type",
@@ -110,11 +107,6 @@
         "fontSize": 12
       },
       "encoding": {
-        "x": {
-          "field": "Australian_City",
-          "type": "nominal",
-          "sort": {"field": "Abs_Flights", "order": "descending"}
-        },
         "y": {"field": "Final_Flights", "type": "quantitative"},
         "text": {
           "condition": {
@@ -123,7 +115,7 @@
             "type": "quantitative",
             "format": ".0f"
           },
-          "value": null
+          "value": ""
         },
         "color": {
           "field": "Flight_Type",
